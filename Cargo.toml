@@ -1,0 +1,22 @@
+[package]
+name = "radix"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "radix"
+path = "src/radix/radix.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+itertools = "0.11.0"
+rand = "0.8.5"
+
+[dev-dependencies]
+rand = "0.8.5"
+criterion = { version = "0.4", features = ["html_reports"] }
+
+[[bench]]
+name = "radix_bench"
+harness = false
